@@ -33,6 +33,20 @@ function Pricing() {
         buttonText: 'Get Pro',
         buttonVariant: 'primary',
     };
+    const teloPlan = {
+        title: 'Telo',
+        priceAmount: '$50',
+        pricePeriod: '/mo.',
+        includesText: 'Everything in Pro, plus:',
+        features: [
+            'Extended limits on Agent',
+            'Unlimited Tab completions',
+            'Background Agents',
+            'Maximum context windows',
+        ],
+        buttonText: 'Get Pro',
+        buttonVariant: 'primary',
+    };
 
     return (
         // <> is a React Fragment — groups elements without adding extra HTML divs
@@ -43,6 +57,7 @@ function Pricing() {
                 {/* This is the same as: title="Hobby" price="Free" includesText="Includes:" etc. */}
                 <PricingCard {...hobbyPlan} />
                 <PricingCard {...proPlan} />
+                <PricingCard {...teloPlan} />
             </div>
         </>
     );
